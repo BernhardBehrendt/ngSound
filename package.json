@@ -1,6 +1,6 @@
 {
   "name": "ng-sound",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "ngSound is an experiemnt using WebAudioApi",
   "main": "app.js",
   "repository": "https://github.com/FrontendRheinMain/website",
