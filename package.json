@@ -1,0 +1,10 @@
+{
+  "name": "ng-sound",
+  "version": "2.0.2",
+  "description": "ngSound is an experiemnt using WebAudioApi",
+  "main": "app.js",
+  "repository": "https://github.com/FrontendRheinMain/website",
+  "author": "Bernhard Behrendt <bernhard.bezdek@googlemail.com>",
+  "license": "MIT",
+  "private": false
+}
