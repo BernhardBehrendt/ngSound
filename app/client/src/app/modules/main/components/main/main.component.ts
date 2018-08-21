@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {ExampleService} from "../../services/example.service";
 
 @Component({
     selector: 'ngsound-root',
@@ -7,4 +8,7 @@ import {Component} from '@angular/core';
 })
 export class MainComponent {
     title = 'ngsound';
+
+    constructor(private exampleService:ExampleService){
+    }
 }

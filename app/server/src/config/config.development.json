@@ -1,13 +1,19 @@
 {
   "server": {
-    "protocol":"http",
-    "domain":"localhost:4200",
+    "protocol": "http",
+    "domain": "localhost:4200",
     "port": 4000
+  },
+  "db": {
+    "mongo": {
+      "host": "localhost",
+      "port": "27017",
+      "dbname": "ngsoundDEV"
+    }
   },
   "controllers": [
     "ExampleController"
   ],
   "states": [
-    
   ]
 }

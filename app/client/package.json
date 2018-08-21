@@ -1,14 +1,14 @@
 {
-  "name": "client",
-  "version": "0.0.0",
+  "name": "ngsound-client",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --base-href /",
     "test": "ng test --sourceMap=true --browsers ChromeHeadless",
-    "cover": "ng test --browsers ChromeHeadless --watch=false --code-coverage --sourceMap=true",
-    "cover:watch": "ng test --browsers ChromeHeadless --watch=true --code-coverage --sourceMap=true",
-    "cover:watch:nomap": "ng test --browsers ChromeHeadless --watch=true --code-coverage --sourceMap=true",
+    "cover": "ng test --watch=false --code-coverage --sourceMap=true --browsers ChromeHeadless",
+    "cover:watch": "ng test --watch=true --code-coverage --sourceMap=true --browsers ChromeHeadless",
+    "cover:watch:nomap": "ng test --watch=true --code-coverage --sourceMap=true --browsers ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "develop": "ng serve --proxy-config proxy.conf.json --host=0.0.0.0 --open"

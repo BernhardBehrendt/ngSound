@@ -3,7 +3,6 @@ import {ModelInterface} from "../interfaces/model.interface";
 import * as Promise from 'bluebird';
 import * as mongoose from "mongoose";
 import {Schema, model} from "mongoose";
-import {Resolver} from "bluebird";
 
 
 export class PersistenceMongodb extends BasePersistence {
@@ -16,15 +15,32 @@ export class PersistenceMongodb extends BasePersistence {
     }
 
     private _connect() {
+
+        if (
+            !process.env.MONGO_HOST ||
+            !process.env.MONGO_PORT ||
+            !process.env.MONGO_DBNAME ||
+            [process.env.MONGO_HOST, process.env.MONGO_PORT, process.env.MONGO_DBNAME].indexOf('undefined') !== -1
+        ) {
+            throw new Error('MongoDB credentials missing. Pleas specify in all config files at db property({"mongo":{"host":"MY_HOST", "port":"MY_PORT", "dbname":"MY_DB"}})');
+        }
+
         return new Promise((resolve) => {
             if (!!this.MongoDbModel) {
                 resolve(true);
             } else {
-                mongoose.connect('mongodb://localhost/tsnode').then((connection) => {
-                    this.connection = connection;
-                    this.MongoDbModel = model(this.collectionName, this.schema);
-                    resolve(true);
-                });
+                mongoose
+                    .connect('mongodb://' + process.env.MONGO_HOST + ':' + process.env.MONGO_PORT + '/' + process.env.MONGO_DBNAME, {
+                        useNewUrlParser: true
+                    })
+                    .then((connection) => {
+                        this.connection = connection;
+                        this.MongoDbModel = model(this.collectionName, this.schema);
+                        resolve(true);
+                    })
+                    .catch((error) => {
+                        console.log(error);
+                    })
             }
         });
     }
