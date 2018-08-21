@@ -1,7 +1,7 @@
 {
   "name": "ngsound",
   "version": "2.0.6",
-  "description": "A playground for WabAudio API",
+  "description": "A playground for WebAudio API",
   "main": "app.js",
   "repository": "https://github.com/BernhardBehrendt/ngSound",
   "author": "Bernhard Behrendt <bernhard.bezdek@googlemail.com>",
