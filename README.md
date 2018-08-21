@@ -1,4 +1,4 @@
-# ngsound Website
+# ngSound Website
 The public website of FrontendRheinMain — Feel free to join, collaborate &amp; improve
 
 ### Prerequisites
@@ -143,8 +143,7 @@ issue in our [issue tracker].
 
 #### Authors
 
-- [Bernhard Behrendt](mailto:bernhard.bezdek@gmail.com) [@FrontendRheinMain](https://github.com/FrontendRheinMain)
-- [Jan Deppisch](mailto:mail@netzartist.de) [@FrontendRheinMain](https://github.com/FrontendRheinMain),
+- [Bernhard Behrendt](mailto:bernhard.bezdek@gmail.com) [@FrontendRheinMain](https://github.com/FrontendRheinMain) [@AOEpeople](https://github.com/AOEpeople)
 
 #### Contributors
 
